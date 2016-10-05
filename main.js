@@ -5,9 +5,12 @@ jQuery(document).ready(function(){
 
 $(".readmore").on("click", function(event){
   	event.preventDefault();
-	$("p").slideToggle();
+  	console.log("readmore clicked");
+	$("p").slideDown();
+	console.log("p slidesdown");
 	$(".readmore").hide();
-	console.log("trace");
+	console.log("readmore hide");
+	
 
 });
 
