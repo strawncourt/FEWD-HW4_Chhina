@@ -1,0 +1,20 @@
+Navjeet, your JavaScript is looking really good.
+
+Your Read More text is sliding down nicely, but the Read Less is just disappearing, without the nice little slideUp effect. You may have done this on purpose as a stylistic choice because the slideUp effect looks a little weird with the Read More link above it. But I'll go ahead and show you how to get it to slideUp too in case you aren't sure.
+
+On line 19 and 20, you have: 
+  $().slideUp("readmore");
+  $(".readless, #show-this-on-click").hide();
+
+So the slideUp() isn't doing anything because there isn't anything in the first parentheses. So you can change it to:
+  $("#show-this-on-click").slideUp();       (similar to what you have on line 9)
+If you try this out, it still doesn't do anything because in line 20, you are hiding the same #show-this-on-click. Well, it is technically working, but the text is being hidden so you can't see that it's also sliding. So, you can just remove the #show-this-on-click in line 20:
+$("#show-this-on-click").slideUp();
+$(".readless").hide();
+
+Tada! And now it works!
+
+
+The rest of your code looks good. And nice job with the console.logs to test stuff!
+
+
